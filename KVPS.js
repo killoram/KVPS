@@ -12,6 +12,9 @@ function KVP_System(Protected){
         return null;
       }
     }
+    var remove = function(key) {
+      delete data[key];
+    }
     var has = function(key) {
       if (data[key]) {
         return true;
@@ -35,6 +38,7 @@ function KVP_System(Protected){
       return {
         set: set,
         get: get,
+        remove: remove,
         has: has,
         Length: Length,
         clear: clear
@@ -43,6 +47,7 @@ function KVP_System(Protected){
       return {
         set: set,
         get: get,
+        remove: remove,
         has: has,
         Length: Length,
         all: all,
