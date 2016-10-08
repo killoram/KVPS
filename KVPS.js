@@ -26,7 +26,7 @@ function KVP_System(Protected){
       data = {};
     }
     var Length = function() {
-      return data.length;
+      return Object.keys(data).length;
     }
     if (!Protected) {
       var all = function() {
